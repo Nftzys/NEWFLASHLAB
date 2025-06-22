@@ -53,7 +53,7 @@ export default async function handler(req: CustomNextApiRequest, res: NextApiRes
       const formData = new FormData()
       formData.append('file', fs.createReadStream(destPath), filename)
 
-      const apiBase = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+        const apiBase = process.env.NEXT_PUBLIC_API_URL || '/api'
       const fastApiUrl = `${apiBase}/add_to_db/?album_id=${albumId}`
       const faceRes = await fetch(fastApiUrl, {
         method: 'POST',
