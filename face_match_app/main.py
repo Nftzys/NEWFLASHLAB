@@ -18,7 +18,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-UPLOAD_DIR = "photos"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+UPLOAD_DIR = os.path.join(BASE_DIR, "photos")
 THRESHOLD = 0.6
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
