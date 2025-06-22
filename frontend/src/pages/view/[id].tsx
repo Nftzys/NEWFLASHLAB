@@ -4,7 +4,7 @@ import { useState, useEffect, ChangeEvent, MouseEvent } from 'react'
 import { ScanFace, Download, X } from 'lucide-react'
 import Image from 'next/image'
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || '/api'
 
 export default function ViewAlbumPage() {
   const router = useRouter()

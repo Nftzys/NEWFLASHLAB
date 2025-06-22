@@ -68,10 +68,15 @@ Point your domain to the VPS and enable this server block. Requests to `/api` wi
 
 ## Environment variables
 
-The frontend reads `NEXT_PUBLIC_API_URL` to reach the backend. When using the above nginx config, set it to `/api` before building:
+The frontend reads `NEXT_PUBLIC_API_URL` to reach the backend. When using the above nginx config, set it to `/api` before building. You can create a `.env.production` file containing:
 
 ```bash
-export NEXT_PUBLIC_API_URL=/api
+NEXT_PUBLIC_API_URL=/api
+```
+
+Then run the build:
+
+```bash
 npm run build
 ```
 
